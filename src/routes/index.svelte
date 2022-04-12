@@ -1,11 +1,17 @@
+<script lang="ts">
+  let counter = 0;
+</script>
+
 <svelte:head>
   <title>Maciej Żyłka</title>
   <meta name="description" content="This is the front page of the Maciej Żyłka's personal site" />
 </svelte:head>
 
-<main>
-  <h1><span>Maciej Żyłka</span> <span class="hyphen">-</span> <span>Full-stack developer</span></h1>
-  <div>
+<main class="fade-in">
+  <h1 style="animation-delay: {counter++ * 50}ms;">
+    <span>Maciej Żyłka</span> <span class="hyphen">-</span> <span>Full-stack developer</span>
+  </h1>
+  <div style="animation-delay: {counter++ * 50}ms;">
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <img src="image.webp" width="400" height="400" alt="Maciej's picture" />
 

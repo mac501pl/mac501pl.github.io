@@ -42,6 +42,6 @@
   .fade-in > * {
     animation: intro 0.5s forwards;
     opacity: 0;
-    transform: translateY(-25%);
+    transform: translateY(-20px);
   }
 </style>
