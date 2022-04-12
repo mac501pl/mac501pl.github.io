@@ -7,7 +7,7 @@
   <meta name="description" content="Page describing how to contact Maciej Żyłka" />
 </svelte:head>
 
-<main>
+<main class="fade-in">
   <div style="animation-delay: {counter++ * 50}ms;">
     <a href="https://www.linkedin.com/in/maciej-%C5%BCy%C5%82ka-b1a708181/" target="_blank" rel="noreferrer noopener">
       <svg viewBox="0 0 512 512">
@@ -52,13 +52,6 @@
     }
   }
 
-  @keyframes intro {
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
   main {
     margin-top: 3rem;
     width: min(100% - 8em, 1000px);
@@ -71,9 +64,6 @@
 
   div {
     display: flex;
-    animation: intro 0.5s forwards;
-    opacity: 0;
-    transform: translateY(-25%);
 
     &:nth-child(odd) {
       @include show-on-right;

@@ -12,24 +12,36 @@
 
 <slot />
 
-<style lang="scss">
-  :global {
-    * {
-      box-sizing: border-box;
-    }
+<style lang="scss" global>
+  * {
+    box-sizing: border-box;
+  }
 
-    body {
-      margin: 0;
-      background-color: $background;
-    }
+  body {
+    margin: 0;
+    background-color: $background;
+    font-family: arial;
+  }
 
-    a,
-    p {
-      color: $text;
-    }
+  a,
+  p {
+    color: $text;
+  }
 
-    a:hover {
-      color: $highlight;
+  a:hover {
+    color: $highlight;
+  }
+
+  @keyframes intro {
+    100% {
+      transform: translateY(0);
+      opacity: 1;
     }
+  }
+
+  .fade-in > * {
+    animation: intro 0.5s forwards;
+    opacity: 0;
+    transform: translateY(-25%);
   }
 </style>
