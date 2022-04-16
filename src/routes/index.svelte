@@ -16,11 +16,17 @@
     <img src="image.webp" width="400" height="400" alt="Maciej's picture" />
 
     <p>
-      Full-stack developer, functional programming enthusiast. Currently working for
-      <a href="https://eda.sw.siemens.com/en-US/" target="_blank" rel="noreferrer noopener">Siemens EDA</a>. Lorem ipsum
-      dolor sit amet consectetur adipisicing elit. Optio debitis animi doloribus, iure incidunt assumenda, eveniet
-      placeat nesciunt id architecto quod autem perferendis quo dolores beatae dolorum consequuntur obcaecati
-      repellendus?
+      <span>
+        Full-stack developer, functional programming enthusiast. Currently working for
+        <a href="https://eda.sw.siemens.com/en-US/" target="_blank" rel="noreferrer noopener">Siemens EDA</a>.
+      </span>
+      <span>
+        I love JavaScript and I use it <a
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://kryogenix.org/code/browser/everyonehasjs.html">as little as possible</a
+        >.
+      </span>
     </p>
   </div>
 </main>
@@ -81,5 +87,12 @@
   p {
     text-align: justify;
     line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    span {
+      display: block;
+    }
   }
 </style>
