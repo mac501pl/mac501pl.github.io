@@ -54,7 +54,7 @@
       margin: 1rem 0 0 0;
     }
 
-    @include mq(s) {
+    @include mq(m) {
       span {
         display: block;
       }
@@ -82,11 +82,6 @@
   img {
     border-radius: 50%;
     margin-inline: auto;
-
-    @include mq(s) {
-      max-width: 350px;
-      max-height: 350px;
-    }
 
     @include mq(xs) {
       max-width: 75vw;
