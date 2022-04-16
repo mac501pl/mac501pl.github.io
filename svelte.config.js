@@ -23,7 +23,7 @@ const config = {
     csp: {
       directives: {
         'default-src': ['none'],
-        'style-src': ['self', 'unsafe-inline'],
+        'style-src': ['self', 'unsafe-inline'], // TODO - unsafe!: when sveltekit implements this - https://github.com/sveltejs/kit/issues/93
         'img-src': ['self'],
       }
     }
