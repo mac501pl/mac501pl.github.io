@@ -24,8 +24,10 @@
   }
 
   a,
-  p {
+  p,
+  span {
     color: $text;
+    font-size: larger;
   }
 
   a:hover {

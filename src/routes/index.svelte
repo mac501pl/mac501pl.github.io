@@ -17,15 +17,16 @@
 
     <p>
       <span>
-        Full-stack developer, functional programming enthusiast. Currently working for
-        <a href="https://eda.sw.siemens.com/en-US/" target="_blank" rel="noreferrer noopener">Siemens EDA</a>.
+        <span>Full-stack developer, functional programming enthusiast. Currently working for</span>
+        <a href="https://eda.sw.siemens.com/en-US/" target="_blank" rel="noreferrer noopener">Siemens EDA</a><span
+          >.</span
+        >
       </span>
       <span>
-        I love JavaScript and I use it <a
-          target="_blank"
-          rel="noreferrer noopener"
-          href="https://kryogenix.org/code/browser/everyonehasjs.html">as little as possible</a
-        >.
+        <span>I love JavaScript and I use it</span>
+        <a href="https://kryogenix.org/code/browser/everyonehasjs.html" target="_blank" rel="noreferrer noopener">
+          as little as possible</a
+        ><span>.</span>
       </span>
     </p>
   </div>
@@ -33,7 +34,7 @@
 
 <style lang="scss">
   main {
-    width: min(100% - 8rem, 1000px);
+    width: min(100% - 8rem, 1200px);
     margin-inline: auto;
 
     @include mq(xs) {
@@ -48,7 +49,7 @@
     font-weight: 300;
     margin-bottom: 2rem;
 
-    @include mq(xs) {
+    @include mq(s) {
       span {
         display: block;
       }
@@ -61,7 +62,11 @@
 
   div {
     display: flex;
-    gap: 3rem;
+    gap: 7rem;
+
+    @include mq(l) {
+      gap: 3rem;
+    }
 
     @include mq(m) {
       flex-direction: column;
@@ -89,10 +94,6 @@
     line-height: 1.4;
     display: flex;
     flex-direction: column;
-    gap: 2em;
-
-    span {
-      display: block;
-    }
+    gap: 2rem;
   }
 </style>

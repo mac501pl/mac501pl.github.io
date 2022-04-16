@@ -17,11 +17,15 @@
   }
 
   nav {
-    padding: 1rem 7rem;
+    padding: 1rem 17rem;
     display: flex;
     gap: 2rem;
 
-    @include mq(s) {
+    @include mq(xl) {
+      padding: 1rem 7rem;
+    }
+
+    @include mq(m) {
       gap: 1rem;
       padding: 1rem 3rem;
     }
@@ -35,7 +39,6 @@
   a {
     text-decoration: underline 0.2em transparent;
     transition: text-decoration-color 300ms;
-    font-size: 14pt;
 
     &:hover {
       color: initial;
