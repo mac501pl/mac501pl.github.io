@@ -12,6 +12,7 @@
   .current,
   .current:hover {
     color: $highlight;
+    font-weight: bold;
   }
 
   nav {
@@ -33,6 +34,7 @@
   a {
     text-decoration: underline 0.2em transparent;
     transition: text-decoration-color 300ms;
+    font-size: 14pt;
 
     &:hover {
       color: initial;
@@ -41,6 +43,12 @@
 
     &:first-child {
       margin-right: auto;
+    }
+
+    &::before {
+      content: attr(title);
+      font-weight: bold;
+      visibility: hidden;
     }
   }
 </style>
