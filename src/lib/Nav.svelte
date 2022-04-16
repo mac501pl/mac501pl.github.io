@@ -33,6 +33,7 @@
     @include mq(xs) {
       gap: 0.5rem;
       padding: 1rem;
+      justify-content: space-around;
     }
   }
 
@@ -47,6 +48,10 @@
 
     &:first-child {
       margin-right: auto;
+
+      @include mq(xs) {
+        margin-right: 0;
+      }
     }
 
     &::before {
