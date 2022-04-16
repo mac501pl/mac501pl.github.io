@@ -4,6 +4,7 @@
 
 <nav>
   <a class:current={current === "/"} href="/">Home</a>
+  <a class:current={current === "/skills"} href="/skills">Skills</a>
   <a class:current={current === "/portfolio"} href="/portfolio">Portfolio</a>
   <a class:current={current === "/contact"} href="/contact">Contact</a>
 </nav>
