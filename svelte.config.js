@@ -21,9 +21,10 @@ const config = {
       default: true,
     },
     csp: {
+      mode: 'hash',
       directives: {
         'default-src': ['none'],
-        'style-src': ['self', 'unsafe-inline'], // TODO - unsafe!: when sveltekit implements this - https://github.com/sveltejs/kit/issues/93
+        'style-src': ['self'],
         'img-src': ['self'],
       }
     }

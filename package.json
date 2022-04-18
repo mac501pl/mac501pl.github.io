@@ -21,6 +21,7 @@
     "eslint": "^8.13.0",
     "eslint-plugin-svelte3": "^3.4.1",
     "html-minifier-terser": "^7.0.0-alpha.2",
+    "node-html-parser": "^5.3.3",
     "sass": "^1.50.0",
     "svelte": "^3.47.0",
     "svelte-check": "^2.5.0",
