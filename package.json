@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "postbuild": "svelte-sitemap --domain https://mac501pl.github.io",
+    "postbuild": "svelte-sitemap --domain https://mac501pl.github.io && npm run cleanup",
+    "cleanup": "del-cli \"./build/_app/**/*.(js|json)\" \"./build/_app/chunks\" \"./build/_app/pages\"",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
@@ -18,6 +19,7 @@
     "@types/html-minifier-terser": "^6.1.0",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.18.0",
+    "del-cli": "^4.0.1",
     "eslint": "^8.13.0",
     "eslint-plugin-svelte3": "^3.4.1",
     "html-minifier-terser": "^7.0.0-alpha.2",
