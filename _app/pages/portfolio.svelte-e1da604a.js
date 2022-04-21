@@ -1,1 +1,0 @@
-import{S as n,i as r,s as i,t as c,c as f,C as o,f as l}from"../chunks/vendor-99798518.js";function p(s){let t;return{c(){t=c("portfolio")},m(e,a){f(e,t,a)},p:o,i:o,o,d(e){e&&l(t)}}}class m extends n{constructor(t){super();r(this,t,null,p,i,{})}}export{m as default};
