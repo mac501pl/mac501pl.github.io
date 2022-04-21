@@ -1,3 +1,4 @@
+import { dev } from '$app/env';
 import { minify, type Options } from 'html-minifier-terser';
 import { parse, HTMLElement } from 'node-html-parser';
 import { createHash } from 'crypto';
@@ -60,7 +61,7 @@ const applyInlineStyleHashCSP = (hashes: Array<string>, document: HTMLElement): 
 export async function handle({ event, resolve }) {
   const response = await resolve(event);
 
-  if (response.headers.get('content-type')?.startsWith('text/html')) {
+  if (response.headers.get('content-type')?.startsWith('text/html') && !dev) {
     const body = await response.text();
     const parsedHTML = parse(body);
     const hashes = await generateInlineStyleHashes(parsedHTML);
