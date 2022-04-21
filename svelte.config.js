@@ -10,7 +10,9 @@ const config = {
       includePaths: 'src/'
     }
   }),
-
+  compilerOptions: {
+    cssHash: ({ hash, css }) => `s-${hash(css)}`,
+  },
   kit: {
     browser: {
       hydrate: false,
