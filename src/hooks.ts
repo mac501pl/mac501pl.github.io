@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { dev } from '$app/env';
 import { minify, type Options } from 'html-minifier-terser';
 import { parse, HTMLElement } from 'node-html-parser';
