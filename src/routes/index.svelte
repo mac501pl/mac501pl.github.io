@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Main from "$lib/Main.svelte";
+
   let counter = 0;
 </script>
 
@@ -7,7 +9,7 @@
   <meta name="description" content="This is the front page of the Maciej Żyłka's personal site" />
 </svelte:head>
 
-<main class="fade-in">
+<Main class="fade-in">
   <h1 style="animation-delay: {counter++ * 50}ms;">
     <span>Maciej Żyłka</span> <span class="hyphen">-</span> <span>Full-stack developer</span>
   </h1>
@@ -30,25 +32,11 @@
       </span>
     </p>
   </div>
-</main>
+</Main>
 
 <style lang="scss">
-  main {
-    width: min(100% - 8rem, 1200px);
-    margin-inline: auto;
-
-    @include mq(xs) {
-      width: 90vw;
-      margin-top: 1rem;
-    }
-  }
-
   h1 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
-    margin: 3rem 0 2rem 0;
+    @include heading;
 
     @include mq(m) {
       margin: 1rem 0 0 0;
