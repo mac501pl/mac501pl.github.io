@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Heading from "$lib/Heading.svelte";
   import Main from "$lib/Main.svelte";
 
   let counter = 0;
@@ -10,9 +11,9 @@
 </svelte:head>
 
 <Main class="fade-in">
-  <h1 style="animation-delay: {counter++ * 50}ms;">
+  <Heading style="animation-delay: {counter++ * 50}ms;" class="index-heading">
     <span>Maciej Żyłka</span> <span class="hyphen">-</span> <span>Full-stack developer</span>
-  </h1>
+  </Heading>
   <div style="animation-delay: {counter++ * 50}ms;">
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <img src="image.webp" width="400" height="400" alt="Maciej's picture" />
@@ -35,13 +36,7 @@
 </Main>
 
 <style lang="scss">
-  h1 {
-    @include heading;
-
-    @include mq(m) {
-      margin: 1rem 0 0 0;
-    }
-
+  :global(.index-heading) {
     @include mq(m) {
       span {
         display: block;
