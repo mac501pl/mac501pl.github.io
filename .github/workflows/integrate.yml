@@ -50,4 +50,5 @@ jobs:
       - name: Compile LaTeX document
         uses: dante-ev/latex-action@latest
         with:
-          root_file: ./latex/output.tex
+          compiler: pdflatex
+          root_file: ./scripts/latex/output.tex
