@@ -6,56 +6,58 @@ on:
       - master
 
 jobs:
-    deploy:
-      name: Deploying to Github Pages
-      runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: ./client
-      steps:
+  deploy:
+    name: Deploying to Github Pages
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./client
+    steps:
 
-        - name: Setup Node
-          uses: actions/setup-node@v3
-          with:
-            node-version: 16.14.2
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.14.2
 
-        - name: Checkout branch
-          uses: actions/checkout@v3
-
-        - name: Install dependencies
-          run: npm ci
-
-        - name: Build
-          run: npm run build
-
-        - name: Deploy
-          uses: peaceiris/actions-gh-pages@v3
-          with:
-           github_token: ${{ secrets.GITHUB_TOKEN }}
-           publish_dir: ./build
-    compile-cv:
-      name: Prepare CV PDF
-      runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: ./scripts
-
-      steps:
-        - name: Setup Node
-          uses: actions/setup-node@v3
-          with:
-            node-version: 16.14.2
-
-      - name: Set up Git repository
+      - name: Checkout branch
         uses: actions/checkout@v3
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Prepare latex template
-        run: npm run generate-tex
+      - name: Build
+        run: npm run build
 
-      - name: Compile LaTeX document
-        uses: dante-ev/latex-action@latest
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          root_file: ./latex/output.tex
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: ./build
+
+  compile-cv:
+    needs: deploy
+    name: Prepare CV PDF
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scripts
+
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.14.2
+
+    - name: Set up Git repository
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Prepare latex template
+      run: npm run generate-tex
+
+    - name: Compile LaTeX document
+      uses: dante-ev/latex-action@latest
+      with:
+        root_file: ./latex/output.tex
