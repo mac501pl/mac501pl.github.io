@@ -19,10 +19,16 @@ jobs:
         - name: Checkout branch
           uses: actions/checkout@v3
 
-        - name: Deploy client
+        - name: Change working dir
           run: cd client
+
+        - name: Install dependencies
           run: npm ci
+
+        - name: Build
           run: npm run build
+
+        - name: Deploy
           uses: peaceiris/actions-gh-pages@v3
           with:
            github_token: ${{ secrets.GITHUB_TOKEN  }}
