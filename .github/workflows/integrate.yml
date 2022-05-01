@@ -9,6 +9,9 @@ jobs:
     deploy:
       name: Deploying to Github Pages
       runs-on: ubuntu-latest
+      defaults:
+        run:
+          working-directory: ./client
       steps:
 
         - name: Setup Node
@@ -18,12 +21,6 @@ jobs:
 
         - name: Checkout branch
           uses: actions/checkout@v3
-
-        - name: Change working dir
-          run: cd client
-
-        - name: Log dir
-          run: pwd
 
         - name: Install dependencies
           run: npm ci
