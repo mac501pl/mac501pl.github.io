@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://mac501pl.github.io/sitemap.xml
