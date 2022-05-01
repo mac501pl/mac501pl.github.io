@@ -1,0 +1,249 @@
+\documentclass[A4,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[OT4]{polski}
+\usepackage[polish]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{arimo}
+\usepackage{fontawesome}
+\usepackage{tabto}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[document]{ragged2e}
+\usepackage{setspace}
+
+\usepackage[
+  includefoot,
+  top = 1.3cm,
+  bottom = 3.5cm,
+  left = 1.2cm,
+  right = 1.2cm,
+]{geometry}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead{}
+\cfoot{\justify Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO))}
+
+\setlist[itemize]{noitemsep}
+
+\renewcommand*\arraystretch{0.75}
+
+\NumTabs{18}
+
+\input{glyphtounicode}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\CVItem}[1]{\item\small{\setstretch{0.8}#1}}
+
+\newcommand{\CVSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\setstretch{0.4}#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{3pt}
+}
+
+\newcommand{\Course}[3]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {\setstretch{0.6}#1} & #2 \\
+      \small #3 \\
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\CompanyAndLocation}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\setstretch{0.4}#1} & #2 \\
+    \end{tabular*}
+}
+
+\newcommand{\TitleAndPeriod}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small #2 \\
+    \end{tabular*}\vspace{2pt}
+}
+
+\newcommand{\CVSubSubheading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small #2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}\vspace{-8pt}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-1pt}}
+
+\begin{document}
+
+\textbf{\Huge \scshape{Maciej Żyłka}} \\ \vspace{5pt} 
+\begin{minipage}[c]{0.4\textwidth}
+    \faPhone \tab +48 512 924 807\\
+    \faMapMarker \tab Bielsko--Biała, Katowice\\
+    \faEnvelopeO \tab \href{mailto:mzylka123@gmail.com}{\underline{mzylka123@gmail.com}}\\
+\end{minipage}
+\begin{minipage}[c]{0.4\textwidth}
+    \faGithub \tab \href{https://github.com/mac501pl}{\underline{https://github.com/mac501pl}} \\
+    %\faGlobe \tab \href{https://mac501pl.github.io}{\underline{https://mac501pl.github.io}} \\
+    \faLinkedinSquare \tab \href{https://www.linkedin.com/in/mac501pl/}{\underline{https://www.linkedin.com/in/mac501pl/}} \\
+\end{minipage}
+
+\section{Doświadczenie}
+  \CVSubHeadingListStart
+    \CompanyAndLocation
+	{Siemens EDA (wcześniej -- Mentor Graphics)}{Katowice; Wilsonville, OR (zdalnie)}
+    \TitleAndPeriod	
+	{Software engineer (\textit{full-time})}{Paź. 2021 -- obecnie}
+      \CVItemListStart
+        \CVItem{Implementacja frontend'u dla systemu buildowego (\textit{React}, \textit{Redux}, \textit{TypeScript}, \textit{sass})}
+        \CVItem{Praca nad przepisaniem frontend'u systemu buildowego z użyciem nowoczesnych bibliotek (\textit{SvelteKit}, \textit{TypeScript}, \textit{sass})}
+        \CVItem{Implementacja mikroserwisu do autentykacji (\textit{Java}, \textit{Jersey}, \textit{Hibernate})}
+        \CVItem{Praca w obcojęzycznym zespole we framework'u \textit{SCRUM}}
+      \CVItemListEnd
+    \TitleAndPeriod	
+	{Junior Java developer (\textit{full-time})}{Kwi. 2021 -- Sie. 2021}
+      \CVItemListStart
+        \CVItem{Implementacja aplikacji do zarządzania danymi (\textit{Java EE}, \textit{WildFly}, \textit{Swing})}
+        \CVItem{Praca we framework'u \textit{SCRUM}}
+      \CVItemListEnd
+    \TitleAndPeriod
+      {DevOps (\textit{staż})}{Maj 2020 -- Mar. 2021}
+      \CVItemListStart
+        \CVItem{Implementacja frontend'u dla systemu buildowego (\textit{React}, \textit{Redux}, \textit{TypeScript}, \textit{sass})}
+        \CVItem{Implementacja mikroserwisu z użyciem protokołu \textit{LDAP} (\textit{Java}, \textit{Jersey}, \textit{Hibernate})}
+        \CVItem{Implementacja aplikacji używanej przez dział \textit{QA} (\textit{Java}, \textit{Swing}, \textit{Perl})}
+        \CVItem{Praca w obcojęzycznym zespole we framework'u \textit{SCRUM}}
+      \CVItemListEnd
+    \TitleAndPeriod
+      {QA (\textit{staż})}{Sty. 2020 -- Kwi. 2020}
+      \CVItemListStart
+        \CVItem{Tworzenie testów jednostkowych dla aplikacji mikroserwisowej (\textit{Java}, \textit{Jersey}, \textit{Hibernate}, \textit{JUnit})}
+        \CVItem{Implementacja aplikacji używanej przez dział \textit{QA} (\textit{Java}, \textit{Swing}, \textit{Perl})}
+        \CVItem{Praca we framework'u \textit{SCRUM}}
+    \CVItemListEnd
+    \CompanyAndLocation
+      {Inelo Polska Spółka z ograniczoną odpowiedzialnością}{Bielsko--Biała}
+    \TitleAndPeriod    
+      {Tester oprogramowania (\textit{praktyka studencka})}{Lip. 2019}
+      \CVItemListStart
+        \CVItem{Pisanie i utrzymywanie testów automatycznych dla aplikacji webowej (\textit{Java}, \textit{Selenium})}
+      \CVItemListEnd
+  \CVSubHeadingListEnd
+
+\section{Wykształcenie}
+  \CVSubHeadingListStart
+    \CVSubheading
+      {Uniwersytet Śląski w Katowicach $|$ \emph{\small{Wydział Nauk Ścisłych i Technicznych}}}{Sosnowiec}
+      {Informatyka inżynierska}{Paź. 2017 -- Kwi. 2021}
+      \CVItemListStart
+        \CVItem{Wybrana specjalność -- Inżynieria Systemów Informatycznych}
+        \CVItem{Studia zdałem z tytułem inżyniera, z wynikiem celującym}
+        \CVItem{Od drugiego roku studiów otrzymywałem stypendium rektora dla najlepszych studentów}
+        \CVItem{Podczas studiów brałem udział w wysokiej jakości programie stażowym oraz programie rozwoju kompetencji studentów~kierunku informatyka WNŚiT UŚ}
+        \CVItem{Podczas studiów udzielałem korepetycji z matematyki i informatyki na poziomie szkoły podstawowej}
+      \CVItemListEnd
+    \CVSubheading
+      {Liceum Ogólnokształcące im. Mikołaja Kopernika}{Bielsko--Biała}
+      {Profil z rozszerzoną matematyką, informatyką, językiem angielskim i geografią}{Wrz. 2014 -- Maj 2017}
+  \CVSubHeadingListEnd
+
+
+
+\section{Umięjętności}
+  \begin{itemize}[leftmargin=0.5cm, label={}]
+    \small{\item{
+    \textbf{Frontend}{: Javascript, Typescript, CSS3, sass, Bootstrap, Tailwind CSS, React, Redux, Recoil, Formik, styled-components, Svelte, SvelteKit, Webpack, Vite, SEO}\\
+    \textbf{Backend}{: Node.js, Express, Jersey, MySQL, Oracle, PL/SQL, MongoDB}\\
+    \textbf{Programming languages}{: Java, C, C++}\\
+    \textbf{Software}{: VS Code, Webstorm, IntelliJ IDEA, Eclipse, Jira, Confluence}\\
+    \textbf{Other}{: Linux, Electron, Docker, Git, npm, yarn, Latex, UML, Android, GitHub Actions, Assembly language}
+    }}
+  \end{itemize}
+
+\section{Umięjętności}
+  \begin{itemize}[leftmargin=0.5cm, label={}]
+    \small{\item{
+    \textbf{Języki programowania}{: Java, C/C++} \\
+    \textbf{Frontend}{: HTML, CSS/sass, JavaScript, TypeScript, React, Svelte, Bootstrap, Tailwind CSS, styled-components,  Redux, Recoil, SvelteKit} \\
+    \textbf{Backend}{: Node.js, Express, Jersey, MongoDB, MySQL} \\
+    \textbf{Oprogramowanie}{: VS Code, Eclipse, IntelliJ IDEA, WebStorm, Jira, Confluence} \\
+    \textbf{Inne}{: Linux, Electron, Docker, git, npm, yarn, Webpack, Vite, REST API, GitHub Actions, Asembler, \LaTeX, SCRUM, UML, Android}
+    }}
+  \end{itemize}
+
+\section{Języki obce}
+  \CVSubHeadingListStart
+    \CVSubSubheading{Angielski -- C1 (certyfikowany)}{}
+    \CVSubSubheading{Niemiecki -- A1}{}
+  \CVSubHeadingListEnd
+
+\section{Warsztaty i wizyty studyjne}
+  \CVSubHeadingListStart
+    \Course
+      {Fundamenty efektywnego tworzenia oprogramowania w C++}{Gru. 2019}
+      {Mentor Graphics}
+    \Course
+      {Scrum, testowanie -- a na co to komu?}{Lis. 2019}
+      {Mentor Graphics}
+    \Course
+      {\makecell[l]{"Be quick or be dead" (Szyfrowanie stosowane, Programowanie w C++ z myślą\\o wydajności, Pyton -- nowe moduły w C++)}}{Lis. 2019}
+      {Mentor Graphics}
+    \Course
+      {Java -- dobre nawyki programisty}{Gru. 2018}
+      {EQ System}
+  \CVSubHeadingListEnd
+
+\section{Certyfikaty i dyplomy}
+  \CVSubHeadingListStart
+    \CVSubSubheading{ISTQB Certified Tester Foundation Level}{Gru. 2019}
+    \CVSubSubheading{Akademicki Certyfikat Znajomości Języka Obcego}{Lut. 2019}
+    \CVSubSubheading{Dyplom potwierdzający ukończenie kursu z zakresu: Webmaster -- Tworzenie stron internetowych}{Cze. 2015}
+  \CVSubHeadingListEnd
+
+\section{Kursy}
+  \CVSubHeadingListStart
+    \CVSubSubheading{Szkolenie z zakresu testowania oprogramowania ISTQB}{Gru. 2019}
+    \CVSubSubheading{Kurs specjalistycznego języka angielskiego w informatyce}{Paź. 2019 -- Lut. 2020}
+    \CVSubSubheading{Webmaster -- Tworzenie stron internetowych}{Cze. 2015}
+    \CVSubSubheading{Szkoła języka angielskiego Speed}{}
+  \CVSubHeadingListEnd
+%Projekty
+\section{Zainteresowania}
+  \CVSubHeadingListStart
+    \CVSubSubheading{Gra w szachy}{}
+    \CVSubSubheading{Technologia}{}
+    \CVSubSubheading{Gra na fortepianie i gitarze}{}
+    \CVSubSubheading{Języki obce}{}
+    \CVSubSubheading{Creative coding -- Processing (Java), p5.js -- (JavaScript)}{}
+    \CVSubSubheading{Systemy wbudowane, programowanie w asemblerze}{}
+    \CVSubSubheading{Matematyka}{}
+  \CVSubHeadingListEnd
+
+\end{document}

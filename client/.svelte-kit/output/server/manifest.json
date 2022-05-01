@@ -1,0 +1,92 @@
+{
+  ".svelte-kit/build/index.js": {
+    "file": "index.js",
+    "src": ".svelte-kit/build/index.js",
+    "isEntry": true,
+    "imports": [
+      "_index-ec28bb3a.js"
+    ],
+    "dynamicImports": [
+      "src/hooks.ts"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "entries/pages/__layout.svelte.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-ec28bb3a.js"
+    ],
+    "css": [
+      "assets/entries/pages/__layout.svelte-508e4f0e.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-ec28bb3a.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "entries/pages/index.svelte.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-ec28bb3a.js",
+      "_Main-c053bc83.js"
+    ],
+    "css": [
+      "assets/entries/pages/index.svelte-20ce4de6.css"
+    ]
+  },
+  "src/routes/portfolio.svelte": {
+    "file": "entries/pages/portfolio.svelte.js",
+    "src": "src/routes/portfolio.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-ec28bb3a.js"
+    ]
+  },
+  "src/routes/contact.svelte": {
+    "file": "entries/pages/contact.svelte.js",
+    "src": "src/routes/contact.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-ec28bb3a.js"
+    ],
+    "css": [
+      "assets/entries/pages/contact.svelte-b01e0dea.css"
+    ]
+  },
+  "src/routes/skills.svelte": {
+    "file": "entries/pages/skills.svelte.js",
+    "src": "src/routes/skills.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-ec28bb3a.js",
+      "_Main-c053bc83.js"
+    ],
+    "css": [
+      "assets/entries/pages/skills.svelte-31b23e3e.css"
+    ]
+  },
+  "_index-ec28bb3a.js": {
+    "file": "chunks/index-ec28bb3a.js"
+  },
+  "_Main-c053bc83.js": {
+    "file": "chunks/Main-c053bc83.js",
+    "imports": [
+      "_index-ec28bb3a.js"
+    ],
+    "css": [
+      "assets/Main-d6adef13.css"
+    ]
+  },
+  "src/hooks.ts": {
+    "file": "chunks/hooks-da68ca0e.js",
+    "src": "src/hooks.ts",
+    "isDynamicEntry": true
+  }
+}

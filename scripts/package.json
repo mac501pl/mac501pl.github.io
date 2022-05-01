@@ -1,0 +1,13 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "scripts": {
+    "generate-tex": "ts-node ./generate-tex.ts",
+    "tsc": "tsc"
+  },
+  "devDependencies": {
+    "ts-node": "^10.7.0",
+    "typescript": "~4.6.4",
+    "node-html-parser": "^5.3.3"
+  }
+}

@@ -6,6 +6,7 @@
     "build": "svelte-kit build",
     "postbuild": "svelte-sitemap --domain https://mac501pl.github.io && npm run cleanup",
     "cleanup": "del-cli \"./build/_app/**/*.(js|json)\" \"./build/_app/chunks\" \"./build/_app/pages\"",
+    "generate-tex": "ts-node --project ./scripts/tsconfig.json ./scripts/generate-tex",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
