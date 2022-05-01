@@ -34,7 +34,7 @@ jobs:
          github_token: ${{ secrets.GITHUB_TOKEN }}
          publish_dir: ./build
 
-  compile_cv:
+  compile:
     needs: deploy
     name: Prepare CV PDF
     runs-on: ubuntu-latest
